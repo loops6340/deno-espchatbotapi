@@ -34,7 +34,7 @@ import * as chatbot from 'https://deno.land/x/espchatbotapi@1.0.0' // Tambien pu
 ```js
 //Puedes usar await en todos los demás ejemplos
 import { hablar } from 'https://deno.land/x/espchatbotapi@1.0.0'
-const respuesta = await chatbot.hablar("hola", 0)
+const respuesta = await hablar("hola", 0)
 console.log(respuesta)
 ```
 
@@ -52,7 +52,7 @@ createCommand({
       name: 'texto',
       type: '...string'
     }
-  ]
+  ],
   execute: function (message, args) {
     const respuesta = await hablar(args.texto, 0)
     message.send(respuesta);
