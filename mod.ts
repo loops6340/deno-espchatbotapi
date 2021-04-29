@@ -20,9 +20,7 @@ interface Datos {
 function similarity(a: string, b: string) {
   const left = a || "";
   const right = b || "";
-  //let insensitive = !(options || {}).sensitive
   const longest = Math.max(left.length, right.length);
-
   return longest === 0 ? 1 : (longest - levenshtein(left, right)) / longest;
 }
 
@@ -49,7 +47,9 @@ function DateMonthYear(fecha: Date) {
   return `${fecha.getDate()}/${fecha.getMonth() + 1}/${fecha.getFullYear()}`;
 }
 
-export async function hablar(texto: string, modo: 0 | 1) {
+type Modo = 0 | 1
+
+export async function hablar(texto: string, modo: Modo) {
   if (!texto) return "debe decirme el texto";
   if (typeof texto !== "string") return "El texto no debe ser un array";
   if (!modo) modo = 0;
