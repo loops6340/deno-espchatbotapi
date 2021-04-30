@@ -18,7 +18,7 @@ Antes de instalarlo, debe tener instalado [Deno](https://deno.land/)
 
 ### Ejemplo 1: Petición básica
 ```js
-import * as chatbot from 'https://deno.land/x/espchatbotapi@1.0.0' // Tambien puedes usar destructuring object
+import * as chatbot from 'https://deno.land/x/espchatbotapi/mod.ts' // Tambien puedes usar destructuring object
 //Manda la petición a la API y recibe una respuesta
 //El 0 significa el modo
 //El modo 0 => modo de respuestas moderadas y controladas
@@ -33,7 +33,7 @@ import * as chatbot from 'https://deno.land/x/espchatbotapi@1.0.0' // Tambien pu
 
 ```js
 //Puedes usar await en todos los demás ejemplos
-import { hablar } from 'https://deno.land/x/espchatbotapi@1.0.0'
+import { hablar } from 'https://deno.land/x/espchatbotapi/mod.ts'
 const respuesta = await hablar("hola", 0)
 console.log(respuesta)
 ```
@@ -41,7 +41,7 @@ console.log(respuesta)
 ### Ejemplo 2: Comando usando DiscordDeno
 ```js
 import { createCommand } from "../utils/helpers.ts";
-import { hablar } from 'https://deno.land/x/espchatbotapi@1.0.0'
+import { hablar } from 'https://deno.land/x/espchatbotapi/mod.ts'
 
 createCommand({
   name: `hablar`,
@@ -62,7 +62,7 @@ createCommand({
 
 ### Ejemplo 3: Obtiene la cantidad total de respuestas de la API
 ```js
-import { total } from 'https://deno.land/x/espchatbotapi@1.0.0'
+import { total } from 'https://deno.land/x/espchatbotapi/mod.ts'
 //Solicita el número de respuesta
    total().then(respuesta => {
      console.log(respuesta)
@@ -72,7 +72,7 @@ import { total } from 'https://deno.land/x/espchatbotapi@1.0.0'
 
 ### Ejemplo 4: Enseñandole algo customizado
 ```js
-import { enseñar } from 'https://deno.land/x/espchatbotapi@1.0.0'
+import { enseñar } from 'https://deno.land/x/espchatbotapi/mod.ts'
 //Enseñale una frase customizada al bot
    enseñar("Quien eres?","yo soy tu padre").then(respuesta => {
      console.log(respuesta)

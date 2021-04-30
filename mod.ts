@@ -32,13 +32,11 @@ export async function enseñar(texto: string, respuesta: string, contraseña?: s
     return "Añadida con exito";
   } else {
     respuesta = encodeURIComponent(respuesta);
-    let response: string;
     const postUrl = `${url}tipo=post&contraseña=${contraseña}&texto=${texto}&respuesta=${respuesta}`;
     const bot = await fetch(postUrl);
     const datos: Datos = await bot.json();
-    if (datos.resultado == "error") response = "hubo un error";
-    else response = datos.resultado;
-    return response;
+    if (datos.resultado == "error") return "hubo un error";
+    else return datos.resultado;
   }
 }
 
@@ -66,7 +64,7 @@ export async function hablar(texto: string, modo: Modo) {
       texto = encodeURIComponent(texto);
       const bot = await fetch(`${url}tipo=get&texto=${texto}`);
       const datos: Datos = await bot.json();
-      if (datos.resultado == "error") respuesta = "hubo un error";
+      if (datos.resultado == "error") return "hubo un error";
       else respuesta = datos.resultado;
       let fecha: Date | string = new Date();
       fecha = DateMonthYear(fecha);
