@@ -7,7 +7,7 @@ interface DatosRespuesta {
 }
 
 interface DatosObtener extends DatosRespuesta {
-    fiabilidad: boolean;
+    fiabilidad: number;
 }
 
 class Chatbot {
