@@ -6,7 +6,7 @@ Una API funcional gratuita y en español dedicada a responder de forma divertida
   ![Creador](https://raster.shields.io/static/v1?label=Creador&message=Seyron#5532&color=RED?style=flat&logo=appveyor)
 
 ## Instalación
-Antes de instalarlo, debe tener instalado [Deno](https://deno.land
+Antes de instalarlo, debe tener instalado [Deno](https://deno.land)
 
 ## Características
 * API es gratuita sin necesidad de ninguna API Key de pago.
